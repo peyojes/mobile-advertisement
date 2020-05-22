@@ -3,9 +3,9 @@ import * as React from 'react';
 import { AntDesign } from '@expo/vector-icons'; 
 
 import TabBarIcon from '../components/TabBarIcon';
-import LinksScreen from '../screens/LinksScreen';
 import CreateScreen from '../screens/CreateScreen';
 import AdvertismentsScreen from '../screens/AdvertismentsScreen';
+import { View } from 'react-native';
 
 const BottomTab = createBottomTabNavigator();
 const INITIAL_ROUTE_NAME = 'Home';

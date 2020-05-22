@@ -23,8 +23,8 @@ export default function App(props) {
         {Platform.OS === 'ios' && <StatusBar barStyle="dark-content" />}
         <NavigationContainer linking={LinkingConfiguration}>
           <Stack.Navigator>
-            <Stack.Screen name="Root" component={BottomTabNavigator} />
-            <Stack.Screen name="Advertisments" component={AdvertismentScreen} />
+            <Stack.Screen name="Root" component={BottomTabNavigator}/>
+            <Stack.Screen name="Advertisments" component={AdvertismentScreen}/>
             <Stack.Screen name="Create" component={CreateScreen}/>
             <Stack.Screen name="Advert" component={AdvertScreen}/>
           </Stack.Navigator>
