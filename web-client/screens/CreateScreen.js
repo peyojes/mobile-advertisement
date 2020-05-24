@@ -7,7 +7,7 @@ import CategoriesPicker from '../components/CategoriesPicker'
 import Config from '../constants/Config';
 
 
-export default function CreateScreen() {
+export default function CreateScreen({ navigation }) {
 
   const [title, setTitle] = useState("");
   const [price, setPrice] = useState("");
@@ -27,16 +27,16 @@ export default function CreateScreen() {
   }
 
   const saveButtonHandler = () => {
-    let body = {
+    const advert = {
       title: title,
       price: price,
       category: category,
       description: description
     }
-    console.log(body);
+    
     fetch(Config.backendEndpoint + '/advertisements', {
       method: 'POST',
-      body: JSON.stringify(body),
+      body: JSON.stringify(advert),
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json'
@@ -49,12 +49,9 @@ export default function CreateScreen() {
         }
       })
       .then((response) => {
-        console.log(response.createTime);
-        body["createTime"] = response.createTime;
-        body = response;
+        navigation.navigate('Advert', response);     
       })
       .catch((error) => console.error(error));
-      console.log(body);
   }
 
 

@@ -1,3 +1,3 @@
 export default {
-    backendEndpoint: "http://192.168.100.53:8080"
+    backendEndpoint: "http://192.168.100.82:8080"
 };

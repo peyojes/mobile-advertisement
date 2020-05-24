@@ -3,12 +3,14 @@ package com.uz.advertisement.controller;
 import com.uz.advertisement.model.Advertisement;
 import com.uz.advertisement.model.Category;
 import com.uz.advertisement.repositories.AdvertisementRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+@Slf4j
 @RestController
 public class AdvertisementControllerImpl implements AdvertisementController {
 
@@ -42,6 +44,7 @@ public class AdvertisementControllerImpl implements AdvertisementController {
 
   @Override
   public void deleteById(String id) {
+    log.info("Delete advert with id = {}", id);
     repository.deleteById(id);
   }
 }
