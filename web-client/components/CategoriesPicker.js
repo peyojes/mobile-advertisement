@@ -30,9 +30,11 @@ const CategoriesPicker =  props => {
               <Text style={styles.text}>Category: </Text>
               <Picker style={styles.picker}
                 selectedValue={props.category}
-                onValueChange={(itemValue, itemIndex) => props.setCategory(itemValue)}
+                onValueChange={(itemValue, itemIndex) => {
+                  console.log(itemValue);
+                  props.setCategory(itemValue)}}
               >
-                <Picker.Item label="--- Select ---" value=""/>
+                {/* <Picker.Item label="--- Select ---" value=""/> */}
                 {categories.map((item, index) => {
                   return (<Picker.Item label={item} value={item} key={item}/>)
                 })}

@@ -39,7 +39,7 @@ export default function AdvertScreen({ route, navigation}) {
               } else {
                 navigation.reset({
                   index: 0,
-                  routes: [{name: 'Advertisments'}]
+                  routes: [{name: 'Root'}]
                 });
               }
             })
