@@ -26,5 +26,5 @@ public interface AdvertisementController {
   Advertisement update(@RequestBody Advertisement advertisement);
 
   @DeleteMapping(value = "/{id}")
-  void deleteById(final String id);
+  void deleteById(@PathVariable final String id);
 }
